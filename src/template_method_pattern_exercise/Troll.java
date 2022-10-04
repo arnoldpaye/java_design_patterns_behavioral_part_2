@@ -1,6 +1,6 @@
 package template_method_pattern_exercise;
 
-public class Troll {
+public class Troll extends Character {
 
   public void pickUpWeapon() {
     System.out.println("Pick up club");
@@ -13,12 +13,4 @@ public class Troll {
   public void moveToSafety() {
     System.out.println("Return to the mountain");
   }
-
-  public void defendAgainstAttack() {
-    pickUpWeapon();
-    defenseAction();
-    moveToSafety();
-    System.out.println();
-  }
-
 }

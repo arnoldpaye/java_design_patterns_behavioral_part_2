@@ -1,6 +1,6 @@
 package template_method_pattern_exercise;
 
-public class Pirate {
+public class Pirate extends Character {
 
   public void pickUpWeapon() {
     System.out.println("Pick up sword");
@@ -13,12 +13,4 @@ public class Pirate {
   public void moveToSafety() {
     System.out.println("Return to the ship");
   }
-
-  public void defendAgainstAttack() {
-    pickUpWeapon();
-    defenseAction();
-    moveToSafety();
-    System.out.println();
-  }
-
 }
