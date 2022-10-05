@@ -18,4 +18,10 @@ public class GroceryList implements Groceries {
   public double getPrice() {
     return groceries.stream().mapToDouble(Groceries::getPrice).sum();
   }
+
+  @Override
+  public void accept(Visitor visitor) {
+    groceries.forEach(g -> g.accept(visitor));
+    visitor.visit(this);
+  }
 }
